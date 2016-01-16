@@ -9,13 +9,6 @@
 	<name>marolab Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
-	<repositories>
-		<repository>
-			<id>mesir-repo</id>
-			<url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -127,8 +120,11 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<finalName></finalName>
-	</build>
+	<repositories>
+		<repository>
+			<id>mesir-repo</id>
+			<url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
+		</repository>
+	</repositories>
 
 </project>
