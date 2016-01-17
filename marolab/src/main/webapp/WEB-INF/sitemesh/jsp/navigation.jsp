@@ -30,7 +30,7 @@
 	                        <a href="/home.do">Home</a>
 	                    </li>
 	                    <li>
-	                        <a href="/about.do">About</a>
+	                        <a href="/about.do">About Me</a>
 	                    </li>
 	                    <li>
 	                        <a href="/notice.do">Notice</a>
