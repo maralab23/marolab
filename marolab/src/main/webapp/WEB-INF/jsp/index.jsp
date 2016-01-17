@@ -149,7 +149,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; MaroLab 2016</p>
+                    <p class="copyright text-muted">Copyright &copy; MaroLab. Since 2016</p>
                 </div>
             </div>
         </div>
