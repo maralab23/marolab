@@ -22,7 +22,7 @@ public class NoticeController {
 	public ModelAndView notice(ModelMap model) throws Exception {
 		
 		List<Notice> noticeList = this.noticeService.getNotice(null);
-		model.put("noticeList", noticeList);
+		model.put("noticeList", noticeList); 
 		
 		return new ModelAndView("notice/notice", model);
 	}	
