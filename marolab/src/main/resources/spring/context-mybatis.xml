@@ -8,10 +8,10 @@
     </settings>
     
     <typeAliases>
-    	<typeAlias alias="Blog" type="com.marolab.blog.vo.Blog"/>
+    	<typeAlias alias="Notice" type="com.marolab.notice.vo.Notice"/>
     </typeAliases>
     
 	<mappers>
-		<mapper resource="sql/blog/BlogSql.xml" />
+		<mapper resource="sql/notice/NoticeSql.xml" />
 	</mappers>
 </configuration>

@@ -1,8 +1,8 @@
-package com.marolab.blog.vo;
+package com.marolab.notice.vo;
 
-public class Blog {
+public class Notice {
 
-	private int blogId;
+	private int seq;
 	
 	private String title;
 
@@ -14,12 +14,12 @@ public class Blog {
 
 	private String updateTime;
 
-	public int getBlogId() {
-		return blogId;
+	public int getSeq() {
+		return seq;
 	}
 
-	public void setBlogId(int blogId) {
-		this.blogId = blogId;
+	public void setSeq(int seq) {
+		this.seq = seq;
 	}
 
 	public String getTitle() {

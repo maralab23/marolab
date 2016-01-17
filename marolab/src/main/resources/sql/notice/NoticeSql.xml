@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="blog">
-	<sql id="getBlogField">
-		SELECT A.BLOG_ID AS blogId,
+<mapper namespace="notice">
+
+	<sql id="getNoticeField">
+		SELECT A.SEQ AS seq,
 			   A.TITLE as title,
 			   A.CONTENT as content,
 			   A.AUTHOR as author,
@@ -10,8 +11,9 @@
 			   DATE_FORMAT(A.UPDATE_TIME, "%Y/%c/%e %r") AS updateTime
 	</sql>
 	
-    <select id="getBlog" parameterType="HashMap" resultType="Blog">
-        <include refid="getBlogField"/>
-          FROM BLOG A
+    <select id="getNotice" parameterType="HashMap" resultType="Notice">
+        <include refid="getNoticeField"/>
+          FROM NOTICE A
+      ORDER BY A.SEQ DESC 
     </select>
 </mapper>

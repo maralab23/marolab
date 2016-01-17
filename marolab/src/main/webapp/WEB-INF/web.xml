@@ -6,7 +6,7 @@
 	<description>MaroLab Project</description>
 
 	<welcome-file-list>
-		<welcome-file>/home.do</welcome-file>
+		<welcome-file>home.do</welcome-file>
 	</welcome-file-list>
 
 	<session-config>
