@@ -18,14 +18,28 @@ public class BlogController {
 	@Autowired
 	private BlogService blogService;
 	
-	@ResponseBody
-	@RequestMapping(value="/main.do")
-	public ModelAndView index(ModelMap model) throws Exception {
+	@RequestMapping(value="/home.do")
+	public ModelAndView home(ModelMap model) throws Exception {
 		List<Blog> blogList = blogService.getBlog(null);
 		model.put("blogList", blogList);
 		System.out.println("Controller.index - blogList : " + blogList.toString());
 		
-		return new ModelAndView("index", model);
+		return new ModelAndView("home", model);
+	}
+
+	@RequestMapping(value="/about.do")
+	public ModelAndView about(ModelMap model) throws Exception {
+		return new ModelAndView("about", model);
+	}
+
+	@RequestMapping(value="/post.do")
+	public ModelAndView post(ModelMap model) throws Exception {
+		return new ModelAndView("post", model);
+	}
+
+	@RequestMapping(value="/contact.do")
+	public ModelAndView contact(ModelMap model) throws Exception {
+		return new ModelAndView("contact", model);
 	}
 
 }

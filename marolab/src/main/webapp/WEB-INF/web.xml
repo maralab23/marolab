@@ -6,7 +6,7 @@
 	<description>MaroLab Project</description>
 
 	<welcome-file-list>
-		<welcome-file>/main.do</welcome-file>
+		<welcome-file>/home.do</welcome-file>
 	</welcome-file-list>
 
 	<session-config>
@@ -19,9 +19,26 @@
 	</context-param>	
 	
 	<context-param>
+		<param-name>sitemesh.configfile</param-name>
+		<param-value>/WEB-INF/sitemesh/sitemesh.xml</param-value>
+	</context-param>	
+	
+	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring/context-*.xml</param-value>
 	</context-param>	
+
+	<filter>
+	    <filter-name>sitemesh</filter-name>
+	    <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+	    <filter-name>sitemesh</filter-name>
+	    <url-pattern>/*</url-pattern>
+	    <dispatcher>REQUEST</dispatcher>
+	    <dispatcher>FORWARD</dispatcher>	    
+	</filter-mapping>
 
 	<filter>
 	    <filter-name>encodingFilter</filter-name>

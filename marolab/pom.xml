@@ -112,8 +112,10 @@
 		    <groupId>com.microsoft.sqlserver</groupId>
 		    <artifactId>sqljdbc4</artifactId>
 		    <version>4.0</version>
+		    <!-- on Real Server 
 		    <scope>system</scope>
 		    <systemPath>${user.home}/jobs/marolab/workspace/sqljdbc4-4.0.jar</systemPath>
+		     -->
 		</dependency>
 
 		<dependency>
@@ -126,6 +128,13 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
+		</dependency>
+		
+		<!-- SiteMesh 화면 템플릿 -->
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>2.4.2</version>
 		</dependency>
 	</dependencies>
 

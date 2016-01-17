@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/sitemesh/jsp">
+    <!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <excludes>
+    	<!-- 
+        <pattern>/exclude.jsp</pattern>
+        <pattern>/exclude/*</pattern>
+         -->
+    </excludes>
+
+    <!-- decorator 태그안에 page의 경로는 defaultdir 위치에서 찾는다.-->
+    <decorator name="default" page="defaultDecorator.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    
+    <decorator name="headPanel" page="headPanel.jsp"/>
+    
+    <decorator name="bodyPanel" page="bodyPanel.jsp"/>
+
+</decorators>
