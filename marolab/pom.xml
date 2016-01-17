@@ -9,6 +9,13 @@
 	<name>marolab Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
+	<repositories>
+		<repository>
+		    <id>mesir-repo</id>
+		    <url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -105,6 +112,7 @@
 		    <groupId>com.microsoft.sqlserver</groupId>
 		    <artifactId>sqljdbc4</artifactId>
 		    <version>4.0</version>
+		    <scope>runtime</scope>
 		</dependency>
 
 		<dependency>
@@ -119,12 +127,5 @@
 			<version>1.2.17</version>
 		</dependency>
 	</dependencies>
-
-	<repositories>
-		<repository>
-			<id>mesir-repo</id>
-			<url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
-		</repository>
-	</repositories>
 
 </project>
