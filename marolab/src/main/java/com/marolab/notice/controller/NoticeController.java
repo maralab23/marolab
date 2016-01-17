@@ -24,7 +24,7 @@ public class NoticeController {
 		List<Notice> noticeList = this.noticeService.getNotice(null);
 		model.put("noticeList", noticeList);
 		
-		return new ModelAndView("notice", model);
+		return new ModelAndView("notice/notice", model);
 	}	
 
 }
