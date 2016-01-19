@@ -19,18 +19,18 @@ import com.marolab.notice.vo.Notice;
 public class IndexController {
 
 	@RequestMapping(value="/home.do")
-	public ModelAndView home(ModelMap model) throws Exception {
-		return new ModelAndView("home", model);
+	public String home() throws Exception {
+		return "home";
 	}
 
 	@RequestMapping(value="/about.do")
-	public ModelAndView about(ModelMap model) throws Exception {
-		return new ModelAndView("about", model);
+	public String about() throws Exception {
+		return "about";
 	}
 
 	@RequestMapping(value="/contact.do")
-	public ModelAndView contact(ModelMap model) throws Exception {
-		return new ModelAndView("contact", model);
+	public String contact() throws Exception {
+		return "contact";
 	}	
 	
 }

@@ -5,6 +5,16 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<!-- MaroLab Common Javascript Lib.  -->
+<script src="js/marolab.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/clean-blog.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head></head>
@@ -36,7 +46,7 @@
 	                        <a href="/notice.do">Notice</a>
 	                    </li>
 	                    <li>
-	                        <a href="/contact.do">Contact</a>
+	                        <a href="/login.do">Login</a>
 	                    </li>
 	                </ul>
 	            </div>

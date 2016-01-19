@@ -2,11 +2,14 @@ package com.marolab.notice.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.marolab.notice.service.NoticeService;
@@ -19,12 +22,46 @@ public class NoticeController {
 	private NoticeService noticeService;
 
 	@RequestMapping(value="/notice.do")
-	public ModelAndView notice(ModelMap model) throws Exception {
+	public String notice(ModelMap model) throws Exception {
 		
-		List<Notice> noticeList = this.noticeService.getNotice(null);
-		model.put("noticeList", noticeList); 
+		model.put("noticeList", this.noticeService.getNotice(null)); 
 		
-		return new ModelAndView("notice/notice", model);
+		return "notice/notice";
+	}
+	
+	@RequestMapping(value="/noticeForm.do")
+	public String noticeForm(ModelMap model, HttpServletRequest request) throws Exception {
+		int seq = ServletRequestUtils.getIntParameter(request, "seq", 0);
+		
+		if (seq != 0) {
+			model.put("notice", this.noticeService.getNoticeBySeq(seq));
+		}
+		
+		return "notice/noticeForm";
 	}	
+	
+	@RequestMapping(value="/noticePostProcess.do")
+	public String noticePostProcess(ModelMap model, HttpServletRequest request, Notice notice) throws Exception {
+		System.out.println("Notice : " + notice.toString());
+		
+		String flag = ServletRequestUtils.getStringParameter(request, "flag", "");
+		
+		int resultCount = 0;
+		String resultMessge = "";
+		if (!StringUtils.isEmpty(flag) && flag.equals("add")) {
+			resultCount = this.noticeService.addNotice(notice);
+			if (resultCount == 0) resultMessge = "add error"; 
+		} else if (!StringUtils.isEmpty(flag) && flag.equals("modify")) { 
+			resultCount = this.noticeService.modifyNotice(notice);
+			if (resultCount == 0) resultMessge = "modify error";
+		} else if (!StringUtils.isEmpty(flag) && flag.equals("remove")) { 
+			resultCount = this.noticeService.removeNotice(notice);
+			if (resultCount == 0) resultMessge = "remove error";
+		} else {
+			
+		}
+		
+		return "redirect:/notice.do";
+	}
 
 }

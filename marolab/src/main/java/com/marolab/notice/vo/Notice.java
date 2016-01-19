@@ -35,7 +35,7 @@ public class Notice {
 	}
 
 	public void setContent(String content) {
-		content = content;
+		this.content = content;
 	}
 
 	public String getAuthor() {
@@ -60,6 +60,13 @@ public class Notice {
 
 	public void setUpdateTime(String updateTime) {
 		this.updateTime = updateTime;
+	}
+
+	@Override
+	public String toString() {
+		return "Notice [seq=" + seq + ", title=" + title + ", content="
+				+ content + ", author=" + author + ", createTime=" + createTime
+				+ ", updateTime=" + updateTime + "]";
 	}
 
 }

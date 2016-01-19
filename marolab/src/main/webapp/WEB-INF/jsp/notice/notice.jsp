@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +13,8 @@
 	                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	                    <div class="post-heading">
 	                        <h1>Notice</h1>
-	                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-	                        <span class="meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</span>
+	                        <h2 class="subheading">서비스 업데이트 및 관리자 활동 이력</h2>
+	                        <span class="meta">문의사항은 관리자에게 메일을 보내주세요.</span>
 	                    </div>
 	                </div>
 	            </div>
@@ -24,26 +25,27 @@
 	    <div class="container">
 	        <div class="row">
 	            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-	            	<c:forEach items="${blogList }" var="blog">
+	            	<c:forEach items="${noticeList }" var="notice">
 	                <div class="post-preview">
-	                    <a href="post.html">
+	                    <a href="/noticeForm.do?seq=${notice.seq }">
 	                        <h2 class="post-title">
-	                            ${blog.title }
+	                            ${notice.title }
 	                        </h2>
 	                        <h3 class="post-subtitle">
-	                            ${blog.content }
+	                            ${notice.content }
 	                        </h3>
 	                    </a>
-	                    <p class="post-meta">Posted by <a href="#">${blog.author }</a> on ${blog.updateTime }</p>
+	                    <p class="post-meta">Noticed by <b>${notice.author }</b> on ${notice.updateTime }</p>
 	                </div>
 	                <hr>
 	                </c:forEach>
-	                <!-- Pager -->
+	                <!-- Posting -->
 	                <ul class="pager">
 	                    <li class="next">
-	                        <a href="#">Older Posts &rarr;</a>
+	                        <a href="/noticeForm.do">작성하기</a>
 	                    </li>
 	                </ul>
+	                 
 	            </div>
 	        </div>
 	    </div>

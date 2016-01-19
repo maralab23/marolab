@@ -11,7 +11,7 @@
 
     <!-- decorator 태그안에 page의 경로는 defaultdir 위치에서 찾는다.-->
     <decorator name="default" page="defaultDecorator.jsp">
-        <pattern>/*</pattern>
+        <pattern>/**</pattern>
     </decorator>
     
     <decorator name="headPanel" page="headPanel.jsp"/>

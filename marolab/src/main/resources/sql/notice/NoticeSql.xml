@@ -16,4 +16,33 @@
           FROM NOTICE A
       ORDER BY A.SEQ DESC 
     </select>
+    
+    <select id="getNoticeBySeq" parameterType="int" resultType="Notice">
+    	<include refid="getNoticeField"/>
+    	  FROM NOTICE A
+    	 WHERE A.SEQ = #{value}
+    </select>
+    
+    <insert id="addNotice" parameterType="Notice">
+    	INSERT INTO NOTICE (TITLE, CONTENT, AUTHOR, CREATE_TIME, UPDATE_TIME)
+    	     VALUES (#{title}, #{content}, 'Maro', NOW(), NOW())
+    </insert>
+    
+    <update id="modifyNotice" parameterType="Notice">
+    	UPDATE NOTICE
+   	 	<trim prefix="SET" suffixOverrides=",">
+   	 		<if test="title != null">TITLE = #{title},</if>
+   	 		<if test="content != null">CONTENT = #{content},</if>
+   	 		<if test="author != null">AUTHOR = #{author}</if>
+   	 		<if test="title != null or content != null or author != null">UPDATE_TIME = NOW(),</if>
+   	 	</trim>
+	   	 WHERE SEQ = #{seq} 
+    </update>
+    
+    <delete id="removeNotice" parameterType="Notice">
+    	DELETE 
+    	  FROM NOTICE
+    	 WHERE SEQ = #{seq}
+    </delete>
+    
 </mapper>
