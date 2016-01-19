@@ -35,7 +35,7 @@
 	                            ${notice.content }
 	                        </h3>
 	                    </a>
-	                    <p class="post-meta">Noticed by <b>${notice.author }</b> on ${notice.updateTime }</p>
+	                    <p class="post-meta">Noticed by <b>${notice.author }</b> on ${notice.createTime }</p>
 	                </div>
 	                <hr>
 	                </c:forEach>
