@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 	@Override
 	public void onAuthenticationFailure( HttpServletRequest request, HttpServletResponse response, AuthenticationException exception ) throws IOException, ServletException	{

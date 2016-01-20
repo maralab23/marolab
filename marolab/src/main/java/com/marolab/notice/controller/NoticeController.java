@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.marolab.notice.service.NoticeService;
 import com.marolab.notice.vo.Notice;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 @Controller
 public class NoticeController {
 	

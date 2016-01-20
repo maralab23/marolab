@@ -1,5 +1,9 @@
 package com.marolab.notice.vo;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 public class Notice {
 
 	private int seq;

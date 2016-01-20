@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 import com.marolab.security.dao.UserDao;
 import com.marolab.security.vo.User;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 @Service
 public class UserLoginService implements UserDetailsService {
 	

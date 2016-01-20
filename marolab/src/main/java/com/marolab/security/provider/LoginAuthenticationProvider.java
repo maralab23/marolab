@@ -15,6 +15,10 @@ import org.springframework.stereotype.Component;
 import com.marolab.security.service.impl.UserLoginService;
 import com.marolab.security.vo.User;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 @Component
 public class LoginAuthenticationProvider implements AuthenticationProvider {
 	

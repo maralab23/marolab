@@ -8,6 +8,10 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 public class LoggerInterceptor extends HandlerInterceptorAdapter {
 
 	protected Log log = LogFactory.getLog(LoggerInterceptor.class);

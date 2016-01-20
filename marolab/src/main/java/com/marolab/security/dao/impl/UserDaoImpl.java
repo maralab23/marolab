@@ -10,6 +10,10 @@ import com.marolab.security.dao.UserDao;
 import com.marolab.security.vo.UserAuth;
 import com.marolab.security.vo.User;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 @Repository
 public class UserDaoImpl implements UserDao {
 

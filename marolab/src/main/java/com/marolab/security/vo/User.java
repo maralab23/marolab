@@ -6,7 +6,10 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 public class User implements UserDetails {
 
 	private int seq;

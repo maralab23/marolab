@@ -10,6 +10,10 @@ import org.springframework.stereotype.Repository;
 import com.marolab.notice.dao.NoticeDao;
 import com.marolab.notice.vo.Notice;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 @Repository
 public class NoticeDaoImpl implements NoticeDao {
 

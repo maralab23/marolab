@@ -5,6 +5,10 @@ import java.util.Map;
 
 import com.marolab.notice.vo.Notice;
 
+/**
+ * @author EunCheolLee
+ * @since 2016.01 최초생성
+ */
 public interface NoticeService {
 	
 	public List<Notice> getNoticeList(Map param) throws Exception;
