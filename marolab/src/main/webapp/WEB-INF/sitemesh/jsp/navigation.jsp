@@ -45,9 +45,6 @@
 	                    <li>
 	                        <a href="${pageContext.request.contextPath}/notice.do">Notice</a>
 	                    </li>
-	                    <li>
-	                        <a href="http://www.marolab.com:9000" target="_blank">Jenkins</a>
-	                    </li>
 	                    <c:choose>
 	                    	<c:when test="${empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.userId }">
 								<li>
