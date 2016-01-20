@@ -1,7 +1,5 @@
 package com.marolab.notice.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +8,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.marolab.notice.service.NoticeService;
 import com.marolab.notice.vo.Notice;
@@ -24,7 +21,7 @@ public class NoticeController {
 	@RequestMapping(value="/notice.do")
 	public String notice(ModelMap model) throws Exception {
 		
-		model.put("noticeList", this.noticeService.getNotice(null)); 
+		model.put("noticeList", this.noticeService.getNoticeList(null)); 
 		
 		return "notice/notice";
 	}

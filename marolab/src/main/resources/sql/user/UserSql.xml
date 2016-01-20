@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+    
+	<sql id="getUserField">
+		SELECT A.SEQ AS seq,
+			   A.USER_ID as userId,
+			   A.PASSWORD as password,
+			   A.STATUS as status
+	</sql>
+	
+	<sql id="getUserAuthField">
+		SELECT A.USER_ID as userId,
+			   A.AUTH as auth
+	</sql>    
+    
+    <select id="getUserByUserId" parameterType="String" resultType="User">
+    	<include refid="getUserField"/>
+    	  FROM USER A
+    	 WHERE A.USER_ID = #{value}
+    	   AND A.STATUS = 'Y'
+    </select>
+    
+    <select id="getUserAuthList" parameterType="User" resultType="UserAuth">
+    	<include refid="getUserAuthField"/>
+          FROM USER_AUTH A
+         WHERE A.USER_ID = #{userId}
+    </select>
+    
+</mapper>

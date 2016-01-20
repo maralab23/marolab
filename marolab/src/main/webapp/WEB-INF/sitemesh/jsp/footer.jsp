@@ -28,7 +28,7 @@
 	                        </li>
 	                    	 -->
 	                        <li>
-	                            <a href="https://github.com/topdevlee/marolab.git">
+	                            <a href="https://github.com/topdevlee/marolab.git" target="_blank">
 	                                <span class="fa-stack fa-lg">
 	                                    <i class="fa fa-circle fa-stack-2x"></i>
 	                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -36,7 +36,7 @@
 	                            </a>
 	                        </li>
 	                        <li>
-	                            <a href="mailto:topdevlee@email.com">
+	                            <a href="mailto:topdevlee@email.com" target="_blank">
 	                                <span class="fa-stack fa-lg">
 	                                    <i class="fa fa-circle fa-stack-2x"></i>
 	                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
     <settings>
         <setting name="cacheEnabled" value="false" />
 		<setting name="useGeneratedKeys" value="true" />
@@ -9,9 +10,13 @@
     
     <typeAliases>
     	<typeAlias alias="Notice" type="com.marolab.notice.vo.Notice"/>
+    	<typeAlias alias="User" type="com.marolab.security.vo.User"/>
+    	<typeAlias alias="UserAuth" type="com.marolab.security.vo.UserAuth"/>
     </typeAliases>
     
 	<mappers>
 		<mapper resource="sql/notice/NoticeSql.xml" />
+		<mapper resource="sql/user/UserSql.xml" />
 	</mappers>
+	
 </configuration>

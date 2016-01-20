@@ -1,6 +1,5 @@
 package com.marolab.notice.service.impl;
 
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
@@ -17,22 +16,27 @@ public class NoticeServiceImpl implements NoticeService {
 	@Autowired
 	private NoticeDao noticeDao;
 
-	public <T extends Notice> List<T> getNotice(Map param) throws Exception {
-		return noticeDao.getNotice(param);
+	@Override
+	public List<Notice> getNoticeList(Map param) throws Exception {
+		return noticeDao.getNoticeList(param);
 	}
 
+	@Override
 	public Notice getNoticeBySeq(int seq) throws Exception {
 		return this.noticeDao.getNoticeBySeq(seq);
 	}
 	
+	@Override
 	public int addNotice(Notice notice) throws Exception {
 		return this.noticeDao.addNotice(notice);
 	}
 
+	@Override
 	public int modifyNotice(Notice notice) throws Exception {
 		return this.noticeDao.modifyNotice(notice);
 	}
 
+	@Override
 	public int removeNotice(Notice notice) throws Exception {
 		return this.noticeDao.removeNotice(notice);
 	}

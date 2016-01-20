@@ -45,9 +45,19 @@
 	                    <li>
 	                        <a href="/notice.do">Notice</a>
 	                    </li>
-	                    <li>
-	                        <a href="/login.do">Login</a>
-	                    </li>
+	                    <c:choose>
+	                    	<c:when test="${empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.userId }">
+								<li>
+			                        <a href="/login.do">Login</a>
+			                    </li>	
+	                    	</c:when>
+	                    	<c:otherwise>
+								<li>
+			                        <a href="/logout.do">Logout</a>
+			                    </li>	                    	
+	                    	</c:otherwise>
+	                    </c:choose>
+	                    
 	                </ul>
 	            </div>
 	            <!-- /.navbar-collapse -->

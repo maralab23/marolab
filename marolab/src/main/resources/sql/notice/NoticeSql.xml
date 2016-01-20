@@ -11,13 +11,13 @@
 			   DATE_FORMAT(A.UPDATE_TIME, "%Y/%c/%e %r") AS updateTime
 	</sql>
 	
-    <select id="getNotice" parameterType="HashMap" resultType="Notice">
+    <select id="getNoticeList" parameterType="HashMap" resultType="Notice">
         <include refid="getNoticeField"/>
           FROM NOTICE A
       ORDER BY A.SEQ DESC 
     </select>
     
-    <select id="getNoticeBySeq" parameterType="int" resultType="Notice">
+    <select id="getNoticeBySeq" parameterType="Int" resultType="Notice">
     	<include refid="getNoticeField"/>
     	  FROM NOTICE A
     	 WHERE A.SEQ = #{value}
