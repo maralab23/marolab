@@ -11,7 +11,7 @@
      
     <!-- 날짜별 로그 파일 생성 -->
     <appender name="rollingFile" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/Users/EunCheolLee/git/marolab/marolab/log/all.log"/>
+        <param name="File" value="${webapp.root}/WEB-INF/log/all.log"/>
         <param name="Append" value="true"/>
         <!-- param name="MaxFileSize" value="100MB"/ -->
         <!-- param name="MaxBackupIndex" value="2"></param -->
@@ -23,7 +23,7 @@
      
     <!-- 날짜별 로그 파일 생성 -->
     <appender name="springFile" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/Users/EunCheolLee/git/marolab/marolab/log/spring.log"/>
+        <param name="File" value="${webapp.root}/WEB-INF/log/spring.log"/>
         <param name="Append" value="true"/>
         <!-- param name="MaxFileSize" value="100MB"/ -->
         <!-- param name="MaxBackupIndex" value="2"></param -->
@@ -36,7 +36,7 @@
     <!-- 날짜별 로그 파일 생성(에러만) -->
     <appender name="errFile" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="Threshold" value="ERROR"/>
-        <param name="File" value="/Users/EunCheolLee/git/marolab/marolab/log/error.log"/>
+        <param name="File" value="${webapp.root}/WEB-INF/log/error.log"/>
         <param name="Append" value="true"/>
         <!-- param name="MaxFileSize" value="100MB"/ -->
         <!-- param name="MaxBackupIndex" value="2"></param -->
