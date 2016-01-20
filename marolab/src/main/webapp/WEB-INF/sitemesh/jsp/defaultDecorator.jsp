@@ -17,11 +17,15 @@
 	
 	    <title><decorator:title default="MaroLab"/></title>
 	
+		<!-- MaroLab Favicon -->
+		<link rel="shortcut icon" href="${pageContext.request.contextPath}/img/marolab-favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="${pageContext.request.contextPath}/img/marolab-favicon.ico" type="image/x-icon" />
+	
 	    <!-- Bootstrap Core CSS -->
-	    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
 	
 	    <!-- Custom CSS -->
-	    <link href="css/clean-blog.min.css" rel="stylesheet">
+	    <link href="${pageContext.request.contextPath}css/clean-blog.min.css" rel="stylesheet">
 	
 	    <!-- Custom Fonts -->
 	    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
