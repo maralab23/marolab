@@ -7,7 +7,7 @@
 	<body>
 	    <!-- Page Header -->
 	    <!-- Set your background image for this header on the line below. -->
-	    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+	    <header class="intro-header" style="background-image: url('${pageContext.request.contextPath}/img/post-bg.jpg')">
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -24,7 +24,7 @@
 		    <div class="container">
 		        <div class="row">
 		            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-		                <form action="/noticePostProcess.do" name="noticePostForm" id="noticePostForm" method="post" novalidate>
+		                <form action="${pageContext.request.contextPath}/noticePostProcess.do" name="noticePostForm" id="noticePostForm" method="post" novalidate>
 		                	<input type="hidden" id="flag" name="flag" value="">
 		                	<c:if test="${not empty notice }">
 			                	<input type="hidden" name="seq" value="${notice.seq }">

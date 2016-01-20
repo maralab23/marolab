@@ -7,7 +7,7 @@
 	<body>
 	    <!-- Page Header -->
 	    <!-- Set your background image for this header on the line below. -->
-	    <header class="intro-header" style="background-image: url('img/about-bg.jpg')">
+	    <header class="intro-header" style="background-image: url('${pageContext.request.contextPath}/img/about-bg.jpg')">
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -36,11 +36,11 @@
 	            	<span class="caption text-muted">
                 		2012.05-2014.10, (주)서울문고 인터넷개발팀
                 	</span>
-	            	<img class="img-responsive" src="img/aboutBandi.png" alt="">
+	            	<img class="img-responsive" src="${pageContext.request.contextPath}/img/aboutBandi.png" alt="">
 	            	<span class="caption text-muted">
                 		2014.10-2015.12, (주)영원아웃도어 IT팀
                 	</span>
-                	<img class="img-responsive" src="img/aboutYoungone.png" alt="">
+                	<img class="img-responsive" src="${pageContext.request.contextPath}/img/aboutYoungone.png" alt="">
                 	<h2 class="section-heading">기술사항</h2>
 	                <p>
 						Language : Java, Jsp, Ajax, jQuery, Javascript, Android, Html, CSS, Node.js, ASP.Net<br>

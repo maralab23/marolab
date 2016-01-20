@@ -7,7 +7,7 @@
 	<body>
 	    <!-- Page Header -->
 	    <!-- Set your background image for this header on the line below. -->
-	    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+	    <header class="intro-header" style="background-image: url('${pageContext.request.contextPath}/img/post-bg.jpg')">
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -27,7 +27,7 @@
 	            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	            	<c:forEach items="${noticeList }" var="notice">
 	                <div class="post-preview">
-	                    <a href="/noticeForm.do?seq=${notice.seq }">
+	                    <a href="${pageContext.request.contextPath}/noticeForm.do?seq=${notice.seq }">
 	                        <h2 class="post-title">
 	                            ${notice.title }
 	                        </h2>
@@ -42,7 +42,7 @@
 	                <!-- Posting -->
 	                <ul class="pager">
 	                    <li class="next">
-	                        <a href="/noticeForm.do">작성하기</a>
+	                        <a href="${pageContext.request.contextPath}/noticeForm.do">작성하기</a>
 	                    </li>
 	                </ul>
 	                 

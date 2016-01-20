@@ -7,13 +7,13 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!-- MaroLab Common Javascript Lib.  -->
-<script src="js/marolab.js"></script>
+<script src="${pageContext.request.contextPath}/js/marolab.js"></script>
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="js/clean-blog.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/clean-blog.min.js"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,30 +30,30 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <a class="navbar-brand" href="/home.do">MaroLab</a>
+	                <a class="navbar-brand" href="${pageContext.request.contextPath}/home.do">MaroLab</a>
 	            </div>
 	
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav navbar-right">
 	                    <li>
-	                        <a href="/home.do">Home</a>
+	                        <a href="${pageContext.request.contextPath}/home.do">Home</a>
 	                    </li>
 	                    <li>
-	                        <a href="/about.do">About Me</a>
+	                        <a href="${pageContext.request.contextPath}/about.do">About Me</a>
 	                    </li>
 	                    <li>
-	                        <a href="/notice.do">Notice</a>
+	                        <a href="${pageContext.request.contextPath}/notice.do">Notice</a>
 	                    </li>
 	                    <c:choose>
 	                    	<c:when test="${empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.userId }">
 								<li>
-			                        <a href="/login.do">Login</a>
+			                        <a href="${pageContext.request.contextPath}/login.do">Login</a>
 			                    </li>	
 	                    	</c:when>
 	                    	<c:otherwise>
 								<li>
-			                        <a href="/logout.do">Logout</a>
+			                        <a href="${pageContext.request.contextPath}/logout.do">Logout</a>
 			                    </li>	                    	
 	                    	</c:otherwise>
 	                    </c:choose>

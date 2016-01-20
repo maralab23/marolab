@@ -7,7 +7,7 @@
 	<body>
 	    <!-- Page Header -->
 	    <!-- Set your background image for this header on the line below. -->
-	    <header class="intro-header" style="background-image: url('img/contact-bg.jpg')">
+	    <header class="intro-header" style="background-image: url('${pageContext.request.contextPath}/img/contact-bg.jpg')">
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -25,7 +25,7 @@
 	    <div class="container">
 	        <div class="row">
 	            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-	                <form action="/loginProcess.do" name="loginForm" id="loginForm" method="post" novalidate>
+	                <form action="${pageContext.request.contextPath}/loginProcess.do" name="loginForm" id="loginForm" method="post" novalidate>
 	                    <div class="row control-group">
 	                        <div class="form-group col-xs-12 floating-label-form-group controls">
 	                            <label>Id</label>
