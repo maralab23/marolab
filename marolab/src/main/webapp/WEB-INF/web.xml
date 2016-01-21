@@ -6,7 +6,7 @@
 	<description>MaroLab Project</description>
 
 	<welcome-file-list>
-		<welcome-file>home.do</welcome-file>
+		<welcome-file>/home.do</welcome-file>
 	</welcome-file-list>
 
 	<session-config>
@@ -106,4 +106,22 @@
 			<page-encoding>utf-8</page-encoding>
 		</jsp-property-group>
 	</jsp-config>
+	
+	<!-- Error Page 처리 Start -->
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.do</location>	
+	</error-page>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/jsp/common/error404.jsp</location>
+	</error-page>
+	
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/jsp/common/error500.jsp</location>
+	</error-page>	
+	<!-- Error Page 처리 End -->	
+	
 </web-app>
