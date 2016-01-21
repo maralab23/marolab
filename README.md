@@ -1,5 +1,5 @@
 # MaroLab
-- MaroLab 개인 홈페이지
+MaroLab 개인 홈페이지
 
 # Front-End
 Jsp
