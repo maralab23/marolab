@@ -59,6 +59,7 @@
 			<version>3.3.1</version>
 		</dependency>
 
+		<!-- Spring Framework Dependencies Start -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
@@ -106,6 +107,7 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.framework.version}</version>
 		</dependency>
+		<!-- Spring Framework Dependencies End -->
 
 		<!-- Spring Security Dependencies Begin -->
 		<dependency>
