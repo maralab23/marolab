@@ -27,7 +27,7 @@
 	            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	            	<h2 class="section-heading">인생 키워드</h2>
 	            	<p>
-	            		Responsibility, Professional, Valuation
+	            		Responsibility, Sincerity, Professional, Valuation
             		</p>
 	            	<h2 class="section-heading">경력사항</h2>
 	            	<span class="caption text-muted">
@@ -44,10 +44,10 @@
                 	<h2 class="section-heading">기술사항</h2>
 	                <p>
 						Language : Java, Jsp, Ajax, jQuery, Javascript, Android, Html, CSS, Node.js, ASP.Net<br>
-						Framework : Spring, Spring Security, iBatis<br>
+						Framework : Spring, Spring Security, iBatis, MyBatis<br>
 						WAS : Apache, Tomcat, Weblogic<br>
 						OS : Linux, Unix, Windows Server<br>
-						Database : Oracle, MS-SQL, MongoDB<br>
+						Database : Oracle, MS-SQL, MySql, MongoDB<br>
 						Platform : Miplatform<br>
 						Development Tool : Eclipse, Editplus, Toad, Sql Server Studio<br>
 						Software Configuration Management : CVS, SVN, Git
