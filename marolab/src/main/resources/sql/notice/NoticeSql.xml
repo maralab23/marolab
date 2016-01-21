@@ -25,7 +25,7 @@
     
     <insert id="addNotice" parameterType="Notice">
     	INSERT INTO NOTICE (TITLE, CONTENT, AUTHOR, CREATE_TIME, UPDATE_TIME)
-    	     VALUES (#{title}, #{content}, 'Maro', NOW(), NOW())
+    	     VALUES (#{title}, #{content}, #{author}, NOW(), NOW())
     </insert>
     
     <update id="modifyNotice" parameterType="Notice">
@@ -33,7 +33,7 @@
    	 	<trim prefix="SET" suffixOverrides=",">
    	 		<if test="title != null">TITLE = #{title},</if>
    	 		<if test="content != null">CONTENT = #{content},</if>
-   	 		<if test="author != null">AUTHOR = #{author}</if>
+   	 		<if test="author != null">AUTHOR = #{author},</if>
    	 		<if test="title != null or content != null or author != null">UPDATE_TIME = NOW(),</if>
    	 	</trim>
 	   	 WHERE SEQ = #{seq} 

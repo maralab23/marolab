@@ -53,20 +53,26 @@
 		                        <div class="form-group col-xs-12" align="center">
 	                            	<c:choose>
 	                            		<c:when test="${empty notice }">
-			                            	<button type="button" class="btn btn-default" value="add">등록</button>
+			                            	<input type="button" id="add" class="btn btn-default" value="등록"/>
 	                            		</c:when>
 	                            		<c:otherwise>
-	                            			<button type="button" class="btn btn-default" value="modify">수정</button>
-	                            			<button type="button" class="btn btn-default" value="remove">삭제</button>
+	                            			<input type="button" id="modify" class="btn btn-default" value="수정"/>
+	                            			<input type="button" id="remove" class="btn btn-default" value="삭제"/>
 	                            		</c:otherwise>
 	                            	</c:choose>
+                            		<input type="button" id="list" class="btn btn-default" value="목록"/>
 		                        </div>
 		                    </div>
 		                </form>
 		                <script type="text/javascript">
 		                	$(document).ready(function(){
-		                		$('#noticePostForm button').click(function(){
-		                			var action = $(this).val()
+		                		$('#noticePostForm input[type=button]').click(function(){
+		                			var action = this.id;
+		                			
+		                			if(action == 'list'){
+		                				location.href = '/notice.do';
+		                				return false;
+		                			}
 		                			
 		                			if(action != 'remove'){
 			                			var title = $('#title').val();
@@ -98,6 +104,8 @@
 		                				$("#flag").val(action);
 		                				$('#noticePostForm').submit();
 		                			}
+		                			
+		                			return false;
 	                			});
 		                	});
 		                </script>

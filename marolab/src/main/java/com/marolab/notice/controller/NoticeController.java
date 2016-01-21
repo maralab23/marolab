@@ -3,6 +3,7 @@ package com.marolab.notice.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.marolab.notice.service.NoticeService;
 import com.marolab.notice.vo.Notice;
+import com.marolab.security.vo.User;
 
 /**
  * @author EunCheolLee
@@ -43,9 +45,9 @@ public class NoticeController {
 	
 	@RequestMapping(value="/noticePostProcess.do")
 	public String noticePostProcess(ModelMap model, HttpServletRequest request, Notice notice) throws Exception {
-		System.out.println("Notice : " + notice.toString());
-		
 		String flag = ServletRequestUtils.getStringParameter(request, "flag", "");
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		notice.setAuthor(user.getUserId());
 		
 		int resultCount = 0;
 		String resultMessge = "";
