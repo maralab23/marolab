@@ -10,6 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import com.marolab.security.service.impl.UserLoginService;
@@ -24,6 +25,9 @@ public class LoginAuthenticationProvider implements AuthenticationProvider {
 	
 	@Autowired
 	private UserLoginService userLoginService;
+	
+	@Autowired
+	private BCryptPasswordEncoder bcryptPasswordEncoder;
 
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -35,8 +39,9 @@ public class LoginAuthenticationProvider implements AuthenticationProvider {
 
         try {
             user = (User) this.userLoginService.loadUserByUsername(username);
-
-            if (!password.equals(user.getPassword())) throw new BadCredentialsException("비밀번호가 일치하지 않습니다.");
+            
+            // BCryptPasswordEncoder 암호화 인코딩 비
+            if (!bcryptPasswordEncoder.matches(password, user.getPassword())) throw new BadCredentialsException("비밀번호가 일치하지 않습니다.");
 
             authorities = user.getAuthorities();
         } catch(UsernameNotFoundException e) {

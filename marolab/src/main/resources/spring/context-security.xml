@@ -40,6 +40,9 @@
 
 	<bean id="loginAuthenticationProvider" class="com.marolab.security.provider.LoginAuthenticationProvider">
 	</bean>
+	
+	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+	</bean>
 
 	<security:authentication-manager alias="authenticationManager">
 		<security:authentication-provider ref="loginAuthenticationProvider">
