@@ -9,11 +9,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import com.marolab.security.service.impl.UserLoginService;
 import com.marolab.security.vo.User;
 
 /**
@@ -24,11 +24,11 @@ import com.marolab.security.vo.User;
 public class LoginAuthenticationProvider implements AuthenticationProvider {
 	
 	@Autowired
-	private UserLoginService userLoginService;
+	private UserDetailsService userLoginService;
 	
 	@Autowired
-	private BCryptPasswordEncoder bcryptPasswordEncoder;
-
+	private PasswordEncoder bcryptPasswordEncoder;
+	
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         String username = authentication.getName();

@@ -32,21 +32,16 @@
 
 	</security:http>
 
-	<bean id="loginSuccessHandler" class="com.marolab.security.handler.LoginSuccessHandler">
-	</bean>
+	<bean id="loginSuccessHandler" class="com.marolab.security.handler.LoginSuccessHandler" />
 
-	<bean id="loginFailureHandler" class="com.marolab.security.handler.LoginFailureHandler">
-	</bean>
+	<bean id="loginFailureHandler" class="com.marolab.security.handler.LoginFailureHandler" />
 
-	<bean id="loginAuthenticationProvider" class="com.marolab.security.provider.LoginAuthenticationProvider">
-	</bean>
+	<bean id="loginAuthenticationProvider" class="com.marolab.security.provider.LoginAuthenticationProvider" />
 	
-	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
-	</bean>
+	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
 
 	<security:authentication-manager alias="authenticationManager">
-		<security:authentication-provider ref="loginAuthenticationProvider">
-		</security:authentication-provider>
+		<security:authentication-provider ref="loginAuthenticationProvider" />
 	</security:authentication-manager>
 
 	<!-- 
