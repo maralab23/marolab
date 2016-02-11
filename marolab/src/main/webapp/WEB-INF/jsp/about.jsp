@@ -43,14 +43,15 @@
                 	<img class="img-responsive" src="${pageContext.request.contextPath}/img/aboutYoungone.png" alt="">
                 	<h2 class="section-heading">기술사항</h2>
 	                <p>
-						Language : Java, Jsp, Ajax, jQuery, Javascript, Android, Html, CSS, Node.js, ASP.Net<br>
+						Language : Java, Jsp, Ajax, jQuery, Javascript, Android, Html, CSS, C#, ASP.Net, Node.js<br>
 						Framework : Spring, Spring Security, iBatis, MyBatis<br>
 						WAS : Apache, Tomcat, Weblogic<br>
 						OS : Linux, Unix, Windows Server<br>
 						Database : Oracle, MS-SQL, MySql, MongoDB<br>
 						Platform : Miplatform<br>
-						Development Tool : Eclipse, Editplus, Toad, Sql Server Studio<br>
-						Software Configuration Management : CVS, SVN, Git
+						Development Tool : Eclipse, Editplus, Toad, Visual Studio 2015, Sql Server Studio<br>
+						Software Configuration Management : CVS, SVN, Git<br>
+						Continuous Integration : Jenkins
 					</p>
 	            </div>
 	        </div>

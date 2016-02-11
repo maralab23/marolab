@@ -37,6 +37,7 @@
 	                <p>
 						MaroLab 시스템은 현재 아마존 웹 서비스(Seoul Region)에서 운영되고 있으며 GitHub과 Jenkins를 활용한 코드 관리 및 배포가 이루어지고 있습니다.<br>
                 	</p>
+                	<img class="img-responsive" src="${pageContext.request.contextPath}/img/systemStructureImg2.png" alt="">
                 	<span class="caption text-muted">
                 		오픈소스를 적극적으로 활용하며 이에 대한 학습을 통해 추후 오픈소스에 기여하기를 희망합니다.
                 	</span>
