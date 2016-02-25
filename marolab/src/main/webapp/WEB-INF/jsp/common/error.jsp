@@ -25,7 +25,7 @@
 	                        			${errorMessage }
 	                        		</c:when>
 	                        		<c:otherwise>
-	                        			관리자에게 문의해주세요.
+	                        			관리자에게 문의해주세요. 
 	                        		</c:otherwise>
 	                        	</c:choose>
 	                        </span>
